@@ -18,7 +18,7 @@ export const getIndex = async (indexKey: string) => {
     };
 
     const url = 'https://www.nseindia.com/api/equity-stockIndices?index=';
-    const data = await fetch(`${url}${encodeURI(indexKey)}`, init).then(res => res.json())
+    const data = await fetch(`${url}${encodeURIComponent(indexKey)}`, init).then(res => res.json())
     return data
 }
 
